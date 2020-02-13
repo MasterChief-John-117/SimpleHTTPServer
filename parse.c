@@ -6,6 +6,7 @@
 int hasflag(char* flag, int argc, char** argv) {
 
 	printf("%d\n", strspan("a", "a"));
+	printf("%s\n", trimleft("--screm", "- "));
 
 	for (int i = 1; i < argc; i++) {
 		if (strspan(flag, trimleft(argv[i], "- "))+1 == strlen(flag)) {
