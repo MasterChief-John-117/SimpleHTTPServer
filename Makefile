@@ -4,7 +4,7 @@ CFLAGS  = -g -Wall -Werror
 TARGET = httpserv
 
 
-all: clean (TARGET)
+all: clean $(TARGET)
 
 test: $(TARGET)
 	./httpserv
