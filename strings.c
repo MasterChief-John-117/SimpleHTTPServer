@@ -2,6 +2,22 @@
 #include <string.h>
 #include "strings.h"
 
+
+int haschar(const char* input, const char* delims) {
+	if (input == NULL || delims == NULL) {
+		return 0;
+	}
+	
+	for (int i = 0; i < strlen(input); i++) {
+		for (int j = 0; j < strlen(delims); j++) {
+			if (input[i] == delims[j]) {
+				return 1;
+			}
+		}
+	}
+	return 0;
+}
+
 int strspan(const char* left, const char* right) {
 	if (left == NULL || right == NULL) {
 		return 0;
