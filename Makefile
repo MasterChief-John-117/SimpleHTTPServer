@@ -11,5 +11,6 @@ test: $(TARGET)
 
 $(TARGET): main.c
 	$(CC) $(CFLAGS) -o $(TARGET) parse.c strings.c main.c  
+
 clean: 
-	rm httpserv 2>/dev/null
+	rm -f ./httpserv 
