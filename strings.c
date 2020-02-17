@@ -43,9 +43,7 @@ char* trimleft(char* input, const char* delims) {
 	if (delims == NULL) {
 		delims = " \n\r\t";
 	}
-	int totrim = strspan(input, delims);
-	printf("totrim: %d\n", totrim);
-	memmove(input, input + totrim, strlen(input) + 1 - totrim);
-	return input;
+	return input + strspan(input, delims);
+	
 }
 
